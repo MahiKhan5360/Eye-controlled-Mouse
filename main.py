@@ -14,4 +14,7 @@ class EyeControlledMouse:
             min_detection_confidence=0.5,
             min_tracking_confidence=0.5
         )
+        # Initialize drawing utilities
+        self.mp_drawing = mp.solutions.drawing_utils
+        self.mp_drawing_styles = mp.solutions.drawing_styles
       
