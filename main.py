@@ -23,7 +23,7 @@ class EyeControlledMouse:
 
 
         # Smoothing parameters
-        self.smooth_factor = 0.5  # Reduced for more responsiveness
+        self.smooth_factor = 0.5  
         self.prev_x, self.prev_y = 0, 0
         
         # Sensitivity multipliers
