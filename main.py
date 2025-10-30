@@ -34,3 +34,17 @@ class EyeControlledMouse:
         self.blink_threshold = 0.21
         self.blink_counter = 0
         self.click_cooldown = 0
+        
+        # Eye landmarks indices (MediaPipe face mesh)
+        self.left_eye = [33, 7, 163, 144, 145, 153, 154, 155, 133, 173, 157, 158, 159, 160, 161, 246]
+        self.right_eye = [362, 382, 381, 380, 374, 373, 390, 249, 263, 466, 388, 387, 386, 385, 384, 398]
+        
+        # Iris landmarks
+        self.left_iris = [474, 475, 476, 477]
+        self.right_iris = [469, 470, 471, 472]
+        
+        # Calibration parameters
+        self.calibrated = False
+        self.eye_region_left = None
+        self.eye_region_right = None
+        
