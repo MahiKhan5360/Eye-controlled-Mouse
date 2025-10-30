@@ -20,4 +20,17 @@ class EyeControlledMouse:
 
         # Get screen dimensions
         self.screen_width, self.screen_height = pyautogui.size()
-      
+
+
+        # Smoothing parameters
+        self.smooth_factor = 0.5  # Reduced for more responsiveness
+        self.prev_x, self.prev_y = 0, 0
+        
+        # Sensitivity multipliers
+        self.horizontal_sensitivity = 1.5
+        self.vertical_sensitivity = 2.2 
+        
+        # Blink detection parameters
+        self.blink_threshold = 0.21
+        self.blink_counter = 0
+        self.click_cooldown = 0
