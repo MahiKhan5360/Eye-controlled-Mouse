@@ -47,4 +47,17 @@ class EyeControlledMouse:
         self.calibrated = False
         self.eye_region_left = None
         self.eye_region_right = None
+
+        def get_eye_aspect_ratio(self, eye_landmarks):
+       
+        # Vertical eye landmarks
+        A = np.linalg.norm(eye_landmarks[1] - eye_landmarks[5])
+        B = np.linalg.norm(eye_landmarks[2] - eye_landmarks[4])
+        
+        # Horizontal eye landmark
+        C = np.linalg.norm(eye_landmarks[0] - eye_landmarks[3])
+        
+        # Eye Aspect Ratio
+        ear = (A + B) / (2.0 * C)
+        return ear
         
